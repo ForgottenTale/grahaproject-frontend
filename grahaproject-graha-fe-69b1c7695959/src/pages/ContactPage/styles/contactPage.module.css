@@ -1,0 +1,852 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.contactPage {
+  font-family: "Roboto", sans-serif;
+}
+
+.map {
+  float: left;
+  position: relative;
+  
+}
+
+.mapImage{
+  height: 25vw;
+  cursor: default;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.mapMarker {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: 40%;
+  left: 54%;
+}
+
+.mapMarker:hover {
+  top: 40%;
+  color: darkred;
+}
+
+.mediaBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 10vh 2vh 4vh 0; */
+  height: 35vw;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: overlay;
+}
+
+.mediaBox::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.mediaBox > h1{
+  position: relative;
+  color: #ffffff;
+  font-weight: bold;  
+  font-size: 8em;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.contactPage > span{
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: #a4a4a4;
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+
+
+
+.info a {
+  color: #646464;
+}
+
+.info a:hover {
+  text-decoration: none;
+  color: #646464;
+}
+
+.info img {
+  height: 23px;
+  align-self: flex-end;
+  float: right;
+  /* margin-left: 6.5em; */
+  width: 111.8px;
+  /* margin-top: -25px; */
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+
+.info > p{
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: rgb(82, 86, 89);
+}
+
+.dGrey {
+  color: #646464;
+}
+
+.contactNumbers{
+  margin-top: 1em;
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill , 1fr);
+}
+
+.contactInfo{
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex: auto;
+}
+
+/* .contactNumbers > .contactInfo{
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex: auto;
+} */
+
+.contactInfo h1{
+  font-size: 20px !important;
+  font-weight: 200;
+}
+
+.contactInfo h3 > a, .contactInfo .mobile{
+  margin: 0 !important;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px !important;
+  color: rgb(82, 86, 89);
+  font-weight: 400 !important;
+}
+
+
+
+@media only screen and (max-width: 900px)  and (orientation : portrait)  {
+  .info{
+    /* margin-top: -60px; */
+    margin-top: -100px;
+  }
+
+  .contactInfo{
+    /* margin-top: 60px; */
+  }
+
+  .mapImage{
+    /* margin-bottom: 70px !important; */
+    
+  }
+
+  .map{
+    height: 0;
+  }
+}
+
+
+/* Smartphone portrait */
+
+@media only screen 
+  and (max-width:240px){
+
+  .contactPage{
+      margin: 2em 9vw;
+  }
+
+  .contactNumbers{
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill , 1fr);
+  }
+
+  .contactPage > span{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .mapImage{
+    height: 45vw;
+    margin-bottom: 50px;
+  }
+
+}
+
+
+@media only screen 
+  and (min-width : 240px)
+  and (max-width : 360px)
+  and (orientation : portrait){
+
+  .contactPage > span{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .contactPage{
+      margin: 2em 8vw;
+  }
+  .contactNumbers{
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill , 1fr);
+  }
+  .mapImage{
+    height: 45vw;
+    margin-bottom: 50px;
+  }
+
+  .contactInfo h1{
+    font-size: 20px !important;
+    margin-bottom: 0.1em;
+  }
+
+  .contactInfo h3 > a, .contactInfo .mobile{
+    font-size: 12px !important;
+  }
+
+
+}
+
+@media only screen
+  and (min-width : 360px) 
+  and (max-width : 399px)
+  and (orientation : portrait){
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .contactPage{
+        margin: 2em 8vw;
+    } 
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+    
+}
+
+
+@media only screen
+  and (min-width : 400px) 
+  and (max-width : 428px)
+  and (orientation : portrait){
+    .contactPage{
+        margin: 2em 7.5vw;
+    } 
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }  
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+@media only screen
+  and (min-width : 428px) 
+  and (max-width : 500px)
+  and (orientation : portrait){
+    .contactPage{
+        margin: 2em 9vw;
+    } 
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }    
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    } 
+}
+
+@media only screen
+  and (min-width : 500px) 
+  and (max-width : 600px)
+  and (orientation : portrait){
+
+    .contactPage{
+        margin: 2em 9vw;
+    } 
+    
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+@media only screen 
+  and (min-width: 600px)
+  and (max-width : 800px)
+  and (orientation : portrait){
+
+    .contactPage{
+        margin: 2em 5.3vw;
+    } 
+    
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+
+
+/* Smartphone Landscape */
+
+@media only screen  
+  and (min-width : 320px)
+  and (max-width : 900px)
+  and (orientation : landscape){
+  .contactPage{
+      margin : 2em 4.9vw;
+  } 
+
+  
+  .contactNumbers{
+    row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill , 1fr);
+  }
+  .contactPage > span{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  } 
+  .mapImage{
+    height: 45vw;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media only screen  
+  and (min-width : 320px)
+  and (max-width : 499px)
+  and (orientation : landscape){
+
+}
+
+@media only screen  
+  and (min-width : 500px)
+  and (max-width : 599px)
+  and (orientation : landscape){
+
+ 
+}
+
+@media only screen  
+  and (min-width : 600px)
+  and (max-width : 650px)
+  and (orientation : landscape){
+ 
+}
+
+@media only screen  
+  and (min-width : 650px)
+  and (max-width : 700px)
+  and (orientation : landscape){
+ 
+}
+
+
+
+@media only screen  
+  and (min-width : 700px)
+  and (max-width : 750px)
+  and (orientation : landscape){
+ 
+}
+
+@media only screen  
+  and (min-width : 750px)
+  and (max-width : 799px)
+  and (orientation : landscape){
+ 
+}
+
+@media only screen  
+  and (min-width : 800px)
+  and (max-width : 890px)
+  and (orientation : landscape){
+ 
+}
+
+
+@media only screen  
+  and (min-width : 890px)
+  and (max-width : 900px)
+  and (orientation : landscape){
+  
+}
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen  
+  and (min-width : 720px) 
+  and (min-height: 600px){
+
+    .contactPage{
+        margin: 2em 5.3vw;
+    } 
+  
+}
+
+@media only screen  
+  and (min-width : 900px){
+    
+    .contactPage{
+        margin : 2em 5vw;
+    } 
+}
+
+@media only screen and (min-width: 1000px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+}
+
+
+
+@media only screen and (min-width : 1280px) {
+    .contactPage{
+      margin: 2em 3.3vw;
+    } 
+}
+
+
+
+/*LCD Displays*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1080px)  
+  and (min-height : 800px) 
+  and (max-height : 900px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+
+    
+}
+
+
+/* Basic Laptop Screens */
+@media only screen and (min-width : 1440px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+
+}
+
+/* Larger laptop screens */
+@media only screen  and (min-width : 1500px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+}
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1600px) {
+  
+    .contactPage{
+        margin : 2em 3.3vw;
+    }   
+}
+
+@media only screen  and (min-width : 1700px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    }   
+}
+
+@media only screen  and (min-width : 1900px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    }  
+ 
+}
+
+
+@media only screen  and (min-width : 2000px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    }  
+  
+}
+
+
+/* Macbook Pro */
+@media only screen 
+  and (min-width: 1700px) 
+  and (max-width: 1800px)  
+  and (min-height : 1080px) 
+  and (max-height : 1100px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+}
+
+
+/* Potrait Orientation for Tablets and Mobiles */
+
+@media only screen 
+  and (min-width: 600px)
+  and (max-width: 720px)
+  and (orientation : portrait)
+  and (-webkit-min-device-pixel-ratio: 1){
+    .contactPage{
+        margin : 2em 5.3vw;
+    } 
+
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+@media only screen 
+  and (min-width: 720px) 
+  and (max-width: 769px) 
+  and (orientation : portrait)
+  and (-webkit-device-pixel-ratio: 1){
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+
+@media only screen 
+  and (min-width: 769px) 
+  and (max-width: 850px)
+  and (max-height : 1300px)
+  and (orientation : portrait){
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+@media only screen 
+  and (min-width: 850px) 
+  and (max-width: 899px) 
+  and (orientation : portrait){
+    .contactPage{
+        margin : 2em 5.3vw;
+    } 
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+
+
+
+@media only screen 
+  and (min-width: 900px) 
+  and (max-width: 959px) 
+  and (orientation : portrait){
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+
+/*Ipad Potrait*/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)
+and (max-height: 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 1)
+{
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+  
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+
+}
+
+/* IPad Pro 10.5 Portrait */
+@media only screen 
+  and (min-width: 834px)
+  and (max-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1)
+  {
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+}
+
+/* IPad Pro 12.5 Portrait */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1)
+{
+    .contactPage{
+        margin : 2em 5.3vw;
+    }
+
+    .contactNumbers{
+      row-gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(auto-fill , 1fr);
+    }
+    .contactPage > span{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 0.8fr;
+    } 
+    .mapImage{
+      height: 45vw;
+      margin-bottom: 50px;
+    }
+
+}
+
+
+
+
+
+
+
+/* Landscape Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+
+
+
+
+@media only screen 
+  and (min-width: 960px) 
+  and (max-width: 1023px) 
+  and (orientation : landscape){
+    .contactPage{
+        margin : 2em 3.3vw;
+    }
+ 
+} 
+
+@media only screen 
+  and (min-width: 1023px) 
+  and (max-width: 1179px) 
+  and (orientation : landscape)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+    .contactPage{
+        margin : 2em 3.3vw;
+    }
+  
+}
+
+
+@media only screen
+  and (min-width: 1180px)
+  and (max-width: 1194px)
+  and (orientation: landscape){
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+}
+
+@media only screen 
+  and (min-width : 1280px) 
+  and (min-height : 740px) 
+  and (max-height : 750px) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    } 
+
+}
+
+/*Ipad Landscape*/
+@media only screen 
+and (min-height : 768px)
+and (max-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .contactPage{
+        margin : 2em 3.3vw;
+    }
+    
+
+}
+
+/* IPad Pro 10.5 Landscape */
+@media only screen 
+  and (min-height: 834px)
+  and (max-width: 1112px) 
+  and (orientation: landscape){
+
+    .contactPage{
+        margin : 2em 3.3vw;
+    }  
+}
+
+/* IPad Pro 12.5 Landscape */
+@media only screen
+  and (min-height: 1024px)
+  and (max-height: 1024px)
+  and (orientation: landscape){
+    .contactPage{
+        margin : 2em 3.3vw;
+    }
+}
+
+
+

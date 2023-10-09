@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+}
+
+.profilePage{
+    margin-left: 3.3vw;
+    margin-right: 3.3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    width: 100%;
+}
+
+.profileImage::before{
+    content: "";
+}
+
+.profileImage{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+}
+
+.imageBox{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 35vw;
+    height: 20vw;
+}
+
+.socials{
+    display: inline;
+    width: 100%;
+    vertical-align: baseline;
+    align-self: flex-end;
+    text-align: left;
+}
+
+.socials svg , .socials a{
+    width: 15px;
+    height: 15px;
+    margin: 0 0 -10px 10px;
+}
+
+.socials a {
+    color: #646464;
+}
+
+.socials a:hover {
+    color: unset;
+}
+
+.profileContent{
+    width: 35vw;
+    text-align: justify;
+}
+
+.name{
+    font-size: 25px;
+    padding: 20px 0 20px 0;
+}
+
+.keyProjects{
+    margin-top: 50px;
+}
+
+svg.itemDash{
+    height: 10px;
+}
+
+.knowMoreSection{
+    margin-top: 50px;
+    justify-self: center;
+}
+
+.knowMore{
+    height: 60px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 40%;
+}
+
+.blogImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:900px) {
+    .profilePage{
+        margin: 0 8vw 0 8vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (aspect-ratio: 16/10){
+  
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width: 300px) and (max-height: 600px) and (orientation : portrait) {
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) and (orientation : portrait) {
+
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) and (orientation : portrait) {
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) and (orientation : portrait) {
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 600px) and (orientation : portrait) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) and (orientation : portrait) {
+
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 800px) and (orientation : portrait) {
+
+}
+
+
+
+@media screen and (min-width: 800px) and (max-width: 2900px) and (orientation : portrait) {
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 5.3vw 0 5.3vw;
+    }
+    .profileImage{
+        display: block;
+        align-self: center;
+    }
+    .imageBox{
+        height: 40vw;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+    }
+    .profileContent{
+        padding: 0 15vw 0 15vw;
+    }
+    .socials{
+        display: none;
+    }
+    .keyProjects{
+        text-align: center;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+        padding-right: 0;
+    }
+    .knowMore{
+    }
+}
+
+
+
+
+
+
+/* Smartphone portrait */
+
+
+
+@media only screen 
+  and (min-width : 240px)
+  and (max-width : 399px)
+  and (orientation : portrait){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+
+@media only screen
+  and (min-width : 400px)
+  and (max-width : 600px)
+  and (orientation : portrait){
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+}
+
+@media only screen 
+  and (min-width: 600px)
+  and (max-width : 800px)
+  and (orientation : portrait){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 5.3vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+}
+
+
+
+/* Smartphone Landscape */
+
+@media only screen  
+  and (min-width : 320px)
+  and (max-width : 499px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+
+}
+
+@media only screen  
+  and (min-width : 500px)
+  and (max-width : 599px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+@media only screen  
+  and (min-width : 600px)
+  and (max-width : 650px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+@media only screen  
+  and (min-width : 650px)
+  and (max-width : 700px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+@media only screen  
+  and (min-width : 700px)
+  and (max-width : 750px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+@media only screen  
+  and (min-width : 750px)
+  and (max-width : 799px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+  
+}
+
+@media only screen  
+  and (min-width : 800px)
+  and (max-width : 890px)
+  and (orientation : landscape){
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+}
+
+@media only screen  
+  and (min-width : 890px)
+  and (max-width : 900px)
+  and (orientation : landscape){
+
+    .profilePage{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4.9vw;
+    }
+    .profileImage{
+        display: block;
+    }
+    .imageBox{
+        height: 55vw;
+        width: 100%;
+    }
+    .profileContent{
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+    .knowMoreSection{
+        display: block;
+        position: relative;
+        align-self: center;
+    }
+
+}
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen  
+  and (min-width : 720px) 
+  and (min-height: 600px){
+
+}
+
+
+@media only screen  
+  and (min-width : 900px){
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+}
+
+@media only screen and (min-width : 1110px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+
+/*LCD Displays*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1080px)  
+  and (min-height : 800px) 
+  and (max-height : 900px) {
+
+} 
+
+
+
+@media only screen  and (min-width : 1280px) {
+
+}
+
+
+@media only screen  and (min-width : 1300px) {
+ 
+}
+/* Basic Laptop Screens */
+@media only screen and (min-width : 1440px) {
+
+}
+
+/* Larger laptop screens */
+@media only screen  and (min-width : 1500px) {
+
+
+}
+
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1600px) {
+
+}
+
+
+@media only screen  and (min-width : 1700px) {
+ 
+}
+
+@media only screen  and (min-width : 1900px) {
+ 
+}
+
+@media only screen  and (min-width : 2000px) {
+
+}
+
+/* Macbook Pro */
+@media only screen 
+  and (min-width: 1700px) 
+  and (max-width: 1800px)  
+  and (min-height : 1080px) 
+  and (max-height : 1100px) {
+
+ 
+}
+
+/* Potrait Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+@media only screen 
+  and (min-width: 600px)
+  and (max-width: 720px)
+  and (orientation : portrait){
+  
+
+  
+}
+
+@media only screen 
+  and (min-width: 720px) 
+  and (max-width: 769px) 
+  and (orientation : portrait)
+  and (-webkit-device-pixel-ratio: 1){
+
+ 
+}
+
+
+@media only screen 
+  and (min-width: 769px) 
+  and (max-width: 850px)
+  and (max-height : 1300px)
+  and (orientation : portrait){
+
+
+}
+
+@media only screen 
+  and (min-width: 850px) 
+  and (max-width: 899px) 
+  and (orientation : portrait){
+
+ 
+
+}
+
+
+@media only screen 
+  and (min-width: 900px) 
+  and (max-width: 959px) 
+  and (orientation : portrait){
+
+  
+
+}
+
+
+/*Ipad Potrait*/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)
+and (max-height: 1024px) 
+and (orientation : portrait) {
+
+}
+
+/* IPad Pro 10.5 Portrait */
+@media only screen 
+  and (min-width: 834px)
+  and (max-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1){
+ 
+}
+
+/* IPad Pro 12.5 Portrait */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1){
+
+
+}
+
+
+
+
+
+
+
+/* Landscape Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+
+@media only screen 
+  and (min-width: 960px) 
+  and (max-width: 1023px) 
+  and (orientation : landscape){
+
+ 
+}
+
+
+
+@media only screen 
+  and (min-width: 1023px) 
+  and (max-width: 1179px) 
+  and (orientation : landscape){
+
+ 
+}
+
+@media only screen
+  and (min-width: 1180px)
+  and (max-width: 1194px)
+  and (orientation: landscape){
+
+ 
+}
+
+@media only screen 
+  and (min-width : 1280px) 
+  and (min-height : 740px) 
+  and (max-height : 750px) {
+
+  
+}
+
+
+
+
+/*Ipad Landscape*/
+@media only screen 
+and (min-height : 768px)
+and (max-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1){
+
+ 
+
+}
+
+/* IPad Pro 10.5 Landscape */
+@media only screen 
+  and (min-height: 834px)
+  and (max-width: 1112px) 
+  and (orientation: landscape){
+
+ 
+}
+
+/* IPad Pro 12.5 Landscape */
+@media only screen
+  and (min-height: 1024px)
+  and (max-height: 1024px)
+  and (orientation: landscape){
+
+
+}
+
+
+@media only screen
+  and (device-width: 2732px)
+  and (device-height: 2048px)
+  and (orientation: landscape){
+ 
+}

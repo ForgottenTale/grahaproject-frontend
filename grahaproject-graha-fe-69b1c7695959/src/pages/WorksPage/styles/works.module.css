@@ -1,0 +1,2273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.worksPage {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  overflow-y: auto;
+}
+
+.secondaryNav{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.navbarDiv {
+  float: right;
+  display: flex;
+  width: 100%;
+}
+
+.miniNav{
+  width: 96vw;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: -1.5em 2em;
+  z-index: 4;
+}
+
+.navbarItem {
+  height: 3vh;
+  font-size: 0.9em;
+  margin-left: 2.5em;
+  /* flex: 1 1 auto; */
+  text-align: right;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.searchBar{
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 1em 2em;
+}
+
+.searchBar > svg{
+  height: 1em;
+}
+
+.mobileMiniNav > button > svg{
+  margin: 0 !important;
+}
+
+.searchInput{
+  overflow: visible;
+  text-align: right;
+  border-radius: 46.5px;
+  border-width: thin;
+  box-sizing:border-box;
+  height: 20px !important;
+  width: 20px;
+  max-width: 20vw;
+  border-color: rgb(0 , 0 ,0 , 0.45);
+  padding-right: 10px;
+  z-index: 5;
+  transition: width 1s;
+  color: white;
+}
+
+.searchBar:hover::before, .searchInput:focus::before{
+  transition: width 1s;
+}
+
+.searchInput::placeholder{
+  color: white;
+}
+
+.searchInput:hover::placeholder, .searchInput:focus::placeholder{
+  color: #9e9e9e;
+}
+
+.searchInput:hover, .searchInput:focus, .searchInput select{
+  color: #9e9e9e;
+  width: 10vw;
+  outline: none;
+  opacity: 1;
+}
+
+
+.gridContainer {
+  display: grid;
+  margin: 2em 3em;
+  grid-template-columns: repeat(auto-fill,23vw);
+  grid-template-rows: repeat(auto-fill ,16vw);
+}
+
+.gridItem, .gridItem embed, .imageCover , .hover{
+  width: 23vw;
+  height: 16vw;
+  margin-bottom: 2vh;
+  object-fit: cover;
+}
+
+.hover:hover{
+  /* opacity: 1;
+  transition: opacity 400ms; */
+  -webkit-animation: hoverEnter 400ms linear forwards;
+  animation: hoverEnter 400ms linear forwards;
+}
+
+
+.gridItem embed {
+  object-fit: cover;
+}
+
+.imageCover {
+  position: absolute;
+  display: none;
+}
+
+.mobileBlog {
+  display: none;
+}
+
+.gridItem:hover , .imageCover:hover , .hover:hover{
+  /* transition: ease-in 2s all; */
+}
+
+.hover {
+  /* opacity: 0; */
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes hoverEnter {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hoverEnter {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes hoverExit {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes hoverExit {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+.hover h1 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1em !important;
+}
+
+.hover .caption {
+  text-align: right;
+  color: white;
+  font-size: 0.7vw;
+  padding: 30px 30px 20px 30px;
+  position: absolute;
+  line-height: 1.6 !important;
+  font-weight: 300 !important;
+  bottom: 0;
+  right: 0;
+  
+}
+
+.moreProjects {
+  width: 150px;
+  color: #9e9e9e;
+  margin: 20vh auto 40vh auto;
+  cursor: pointer;
+}
+
+.moreProjects span {
+  font-size: 1.4em;
+}
+
+.mobileMiniNav{
+  display: none;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.mobileMiniNav > button{
+  background: none;
+  border: none;
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  align-self: flex-end;
+}
+
+.mobileMiniNav > FontAwesomeIcon{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.dropdown{
+  line-height: 30px;
+  justify-content: center;
+  text-align-last: center;
+  transition: height 5s ease-in;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+
+.dropdown_hidden{
+  height: 0;
+  overflow: hidden;
+}
+
+.dropdown > .navbarItem {
+  font-size: 0.9em;
+  /* flex: 1 1 auto; */
+  height: 2vw;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 0;
+  align-items: center;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.dropdown_hidden ~ .dropdown > .navbarItem{
+  opacity: 0;
+}
+
+.rotate{
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+
+.icons {
+  display: none;
+}
+
+
+
+
+/* Toggling the mini Nav design */
+@media only screen 
+  and (max-width : 900px){
+    .secondaryNav{
+      margin: 2em 2em;
+      margin-right: 2em;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    .miniNav{
+      display: none;
+    }
+    .mobileMiniNav{
+      /* display: none; */
+      display: flex !important;
+    }
+    .searchBar{
+      margin: 0 0;
+      flex-direction: row;
+      column-gap: 20px;
+    }
+
+    .searchInput{
+      width: 20px;
+    }
+    .searchInput:hover, .searchInput:focus{
+      z-index: 10;
+      width: 40vw;
+      text-align: left;
+      padding-left: 5px;
+    }
+  }
+
+@media only screen 
+  and (min-width: 900px){
+  .dropdown{
+    display: none;
+  }
+}
+
+/* Smartphone portrait */
+
+@media only screen 
+  and (max-width:240px){
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 48vw);
+      margin: 2em 8.5vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 83vw;
+      height: 45vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 8.5vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 15vw;
+    }
+
+    .mobileMiniNav > button > .svg-inline--fa.fa-w-14{
+      margin: 0;
+    }
+    
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+}
+
+
+@media only screen 
+  and (min-width : 240px)
+  and (max-width : 360px)
+  and (orientation : portrait){
+
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 48vw);
+      margin: 2em 8.5vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 83vw;
+      height: 45vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 8.5vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+    .mobileMiniNav > button > .svg-inline--fa.fa-w-14{
+      margin: 0;
+    }
+    
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+
+}
+
+@media only screen
+  and (min-width : 360px) 
+  and (max-width : 399px)
+  and (orientation : portrait){
+
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 50vw);
+      margin: 2em 8vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 84vw;
+      height: 45vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 8vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    
+    .svg-inline--fa.fa-w-14{
+      float: right;
+      margin-bottom: 4px;
+      width: 0.9em;
+      height: auto;
+    }
+
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+      
+}
+
+
+@media only screen
+  and (min-width : 400px) 
+  and (max-width : 428px)
+  and (orientation : portrait){
+
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 50vw);
+      margin: 2em 8vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 84.5vw;
+      height: 45vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    
+    .svg-inline--fa.fa-w-14{
+      float: right;
+      margin-top: 5px;
+      margin-left: 10px;
+      width: 0.9em;
+      height: auto;
+    }
+
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+      
+}
+
+@media only screen
+  and (min-width : 428px) 
+  and (max-width : 500px)
+  and (orientation : portrait){
+
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 50vw);
+      margin: 2em 9vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 82vw;
+      height: 45vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 9vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    
+    .svg-inline--fa.fa-w-14{
+      float: right;
+      margin-top: 5px;
+      margin-left: 10px;
+      width: 0.9em;
+      height: auto;
+    }
+
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+      
+}
+
+@media only screen
+  and (min-width : 500px) 
+  and (max-width : 600px)
+  and (orientation : portrait){
+
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 50vw);
+      margin: 2em 9vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 82vw;
+      height: 45vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 6.3vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 9vw;
+    }
+
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+    
+    .svg-inline--fa.fa-w-14{
+      float: right;
+      margin-top: 5px;
+      margin-left: 10px;
+      width: 0.9em;
+      height: auto;
+    }
+
+    .hover h1{
+      font-size: 7vw;
+    }
+
+    .hover .caption{
+      font-size: 2.5vw;
+    }
+      
+}
+
+@media only screen 
+  and (min-width: 600px)
+  and (max-width : 800px)
+  and (orientation : portrait){
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 50vw);
+      margin: 2em 9vw;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 84.5vw;
+      height: 45vw;
+    }
+
+    .searchInput{
+      width: 20px;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+      
+
+}
+
+
+
+/* Smartphone Landscape */
+
+@media only screen  
+  and (min-width : 320px)
+  and (max-width : 499px)
+  and (orientation : landscape){
+    .secondaryNav{
+      margin: 2em 2.5em;
+      /* margin-right: 2em; */
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  
+    .gridContainer{
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(auto-fill , 53vw);
+      margin: 1em 5vw;
+      /* grid-row-gap: 4em; */
+      /* row-gap: 1vw; */
+      /* grid-column-gap: 19px; */
+      column-gap: 20px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 90vw;
+      height: 50vw;
+    }
+
+    .secondaryNav{
+      margin: 1em 4.9vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+    }
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 2.5vw;
+    }
+    
+}
+
+@media only screen  
+  and (min-width : 500px)
+  and (max-width : 599px)
+  and (orientation : landscape){
+
+    .secondaryNav{
+      margin: 2em 4.9vw;
+      /* margin-right: 2em; */
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 32vw);
+      margin: 2em 5vw;
+      /* grid-row-gap: 4em; */
+      row-gap: 1vw;
+      /* grid-column-gap: 19px; */
+      column-gap: 19px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 43.4vw;
+      height: 30vw;
+    }
+  
+    .miniNav{
+      width: 96.7vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+      padding-top: 10px;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+    }
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+  
+}
+
+@media only screen  
+  and (min-width : 600px)
+  and (max-width : 650px)
+  and (orientation : landscape){
+
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 36vw);
+      margin: 0;
+      margin: 2em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      /* grid-row-gap: 5px; */
+      row-gap: 10px;
+      /* grid-column-gap: 15px; */
+      /* grid-column-gap: 15px; */
+      column-gap: 17px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 43.6vw;
+      height: 34.2vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 4.9vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+  
+}
+
+@media only screen  
+  and (min-width : 650px)
+  and (max-width : 700px)
+  and (orientation : landscape){
+
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 36vw);
+      margin: 0;
+      margin: 2em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      /* grid-row-gap: 5px; */
+      row-gap: 10px;
+      /* grid-column-gap: 15px; */
+      /* grid-column-gap: 15px; */
+      column-gap: 17px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 43.6vw;
+      height: 34.7vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 4.9vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+  
+}
+
+
+
+@media only screen  
+  and (min-width : 700px)
+  and (max-width : 750px)
+  and (orientation : landscape){
+
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 38vw);
+      margin: 0;
+      margin: 2em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      /* row-gap: 0px; */
+      /* grid-column-gap: 19px; */
+      column-gap: 19px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 43.7vw;
+      height: 36vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 4.9vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+}
+
+@media only screen  
+  and (min-width : 750px)
+  and (max-width : 799px)
+  and (orientation : landscape){
+
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 40vw);
+      margin: 0;
+      margin: 2em 4.9vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      row-gap: 5px;
+      /* grid-column-gap: 15px; */
+      column-gap: 15px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 44.1vw;
+      height: 37.7vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 5vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    } 
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+}
+
+@media only screen  
+  and (min-width : 800px)
+  and (max-width : 890px)
+  and (orientation : landscape){
+
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 40vw);
+      margin: 0;
+      margin: 2em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      row-gap: 5px;
+      /* grid-column-gap: 15px; */
+      column-gap: 15px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 44vw;
+      height: 37.7vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 5vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    } 
+
+    
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+}
+
+
+@media only screen  
+  and (min-width : 890px)
+  and (max-width : 900px)
+  and (orientation : landscape){
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 40vw);
+      margin: 0;
+      margin: 2em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      row-gap: 5px;
+      /* grid-column-gap: 15px; */
+      column-gap: 15px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 44.2vw;
+      height: 37.7vw;
+    }
+  
+    .secondaryNav{
+      margin: 2em 4.9vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 40vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    
+    .hover h1{
+      font-size: 4vw;
+    }
+
+    .hover .caption{
+      font-size: 1.5vw;
+    }
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+    
+  
+    
+}
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen  
+  and (min-width : 720px) 
+  and (min-height: 600px){
+    
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 32vw);
+    margin: 2em 5.3vw;
+    /* grid-row-gap: 0px; */
+    /* row-gap: 0px; */
+    /* grid-column-gap: 19px; */
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 43.4vw;
+    height: 30vw;
+    /* margin-bottom: 0; */
+  }
+
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+      margin: 0;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+      
+}
+
+@media only screen  
+  and (min-width : 900px){
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 40vw);
+      margin: 0;
+      margin : 1em 5vw;
+      /* margin-left: 1.6em; */
+      /* grid-row-gap: 0px; */
+      row-gap: 5px;
+      /* grid-column-gap: 15px; */
+      column-gap: 15px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 44.2vw;
+      height: 37.7vw;
+    }
+  
+    .secondaryNav{
+      margin: 1em 4.9vw 0 4.9vw;
+    }
+
+    .miniNav{
+      margin: -1.5em 0;
+    }
+
+    .searchBar{
+      margin: 1em 0;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 3.3vw;
+    }
+  
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 15vw;
+    }
+
+
+    .svg-inline--fa.fa-w-14{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    
+    .hover h1{
+      font-size: 4vw;
+    }
+
+    .hover .caption{
+      font-size: 1.5vw;
+    }
+
+    .hover h1 {
+      font-size: 5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+    
+  
+    
+}
+
+@media only screen and (min-width: 1024px) {
+  .secondaryNav{
+    margin: -1.5em 3.3vw 1em 3.3vw;
+  }
+  
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+}
+
+@media only screen and (min-width : 1280px) {
+
+  .secondaryNav{
+    margin: 1em 3.3vw -1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput:hover, .searchInput:focus, .searchInput select{
+    min-width: 10vw;
+  }
+
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 17.5vw);
+    margin: 2em 3.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22vw;
+    height: 16vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .hover h1 {
+    font-size: 2.4vw;
+  }
+  
+  .hover .caption {
+    font-size: 0.8vw;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+
+}
+
+
+@media only screen and (min-width : 1300px) {
+
+  .secondaryNav{
+    margin: 1em 3.3vw -1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput:hover, .searchInput:focus, .searchInput select{
+    min-width: 10vw;
+  }
+
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 17.5vw);
+    margin: 2em 3.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22vw;
+    height: 16vw;
+    margin-bottom: 2vw;
+  }
+
+  .hover h1 {
+    font-size: 2.4vw;
+  }
+  
+  .hover .caption {
+    font-size: 0.8vw;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+
+}
+
+
+/*LCD Displays*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1080px)  
+  and (min-height : 800px) 
+  and (max-height : 900px) {
+
+    .gridContainer{
+      grid-template-columns: repeat(4 , 1fr);
+      grid-template-rows: repeat(auto-fill , 16vw);
+      margin: 2em 3.3vw;
+      row-gap: 20px;
+      column-gap: 19px;
+    }
+
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 22.9vw;
+      height: 16vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 3.3vw;
+    }
+
+    .miniNav{
+      margin: -1.5em 0;
+    }
+
+    .searchBar{
+      margin: 1em 0;
+    }
+    .searchInput:hover, .searchInput:focus, .searchInput select{
+      min-width: 10vw;
+    }
+
+    
+    .hover h1 {
+      font-size: 2.4vw;
+    }
+    
+    .hover .caption {
+      font-size: 0.8vw;
+    }
+
+    .searchInput{
+      width: 20px;
+      height: 2vw;
+    }
+
+}
+
+
+/* Basic Laptop Screens */
+@media only screen and (min-width : 1440px) {
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.3vw;
+    height: 16vw;
+    margin-bottom: 0;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+      margin: -1.5em 0;
+  }
+
+  .searchBar{
+      margin: 1em 0;
+  }
+
+  
+  .hover h1 {
+    font-size: 2.4vw;
+  }
+  
+  .hover .caption {
+    font-size: 0.8vw;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+
+
+}
+
+/* Larger laptop screens */
+@media only screen  and (min-width : 1500px) {
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.3vw;
+    height: 16vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+}
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1600px) {
+  
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16.6vw);
+    margin: 1em 3.3vw;
+    row-gap: 19px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.4vw;
+    height: 16.6vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+  
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+}
+
+@media only screen  and (min-width : 1700px) {
+  
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16.6vw);
+    margin: 1em 3.3vw;
+    row-gap: 19px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.5vw;
+    height: 16.6vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+}
+
+@media only screen  and (min-width : 1900px) {
+  
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16.6vw);
+    margin: 1em 3.3vw;
+    row-gap: 19px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.5vw;
+    height: 16.6vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+  
+}
+
+
+@media only screen  and (min-width : 2000px) {
+  
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16.6vw);
+    margin: 1em 3.3vw;
+    row-gap: 19px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.7vw;
+    height: 16.6vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+  
+}
+
+
+/* Macbook Pro */
+@media only screen 
+  and (min-width: 1700px) 
+  and (max-width: 1800px)  
+  and (min-height : 1080px) 
+  and (max-height : 1100px) {
+  .gridContainer{
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.5vw;
+    height: 16vw;
+  }
+
+  .secondaryNav{
+    margin: 1em 3.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0;
+  }
+
+  .searchBar{
+    margin: 1em 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 1.5vw;
+  }
+
+}
+
+
+/* Potrait Orientation for Tablets and Mobiles */
+
+@media only screen 
+  and (min-width: 600px)
+  and (max-width: 720px)
+  and (orientation : portrait)
+  and (-webkit-min-device-pixel-ratio: 1){
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 40vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 43.4vw;
+    height: 36.4vw;
+  }
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 4vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+}
+
+@media only screen 
+  and (min-width: 720px) 
+  and (max-width: 769px) 
+  and (orientation : portrait)
+  and (-webkit-device-pixel-ratio: 1){
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.9vw;
+    height: 16vw;
+  }
+
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+}
+
+
+@media only screen 
+  and (min-width: 769px) 
+  and (max-width: 850px)
+  and (max-height : 1300px)
+  and (orientation : portrait){
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 35vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 43.6vw;
+    height: 32.5vw;
+  }
+
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+}
+
+@media only screen 
+  and (min-width: 850px) 
+  and (max-width: 899px) 
+  and (orientation : portrait){
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.9vw;
+    height: 16vw;
+  }
+
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+}
+
+
+
+
+@media only screen 
+  and (min-width: 900px) 
+  and (max-width: 959px) 
+  and (orientation : portrait){
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 16vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 22.9vw;
+    height: 16vw;
+  }
+
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+}
+
+
+/*Ipad Potrait*/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)
+and (max-height: 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 1)
+{
+
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 35vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 43.6vw;
+    height: 32.5vw;
+  }
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+  .searchBar{
+    margin: 0;
+  }
+
+}
+
+/* IPad Pro 10.5 Portrait */
+@media only screen 
+  and (min-width: 834px)
+  and (max-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1)
+  {
+    .gridContainer{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(auto-fill , 35vw);
+      margin: 2em 5.3vw;
+      row-gap: 0px;
+      column-gap: 19px;
+    }
+  
+    .gridItem, .gridItem embed, .imageCover , .hover{
+      width: 43.6vw;
+      height: 32.5vw;
+    }
+
+    .secondaryNav{
+      margin: 2em 5.3vw;
+    }
+  
+    .hover h1 {
+      font-size: 4.5vw;
+    }
+    
+    .hover .caption {
+      font-size: 1.5vw;
+    }
+  
+
+}
+
+/* IPad Pro 12.5 Portrait */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1)
+{
+  .gridContainer{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(auto-fill , 35vw);
+    margin: 2em 5.3vw;
+    row-gap: 0px;
+    column-gap: 15px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 44vw;
+    height: 32.5vw;
+  }
+
+  .secondaryNav{
+    margin: 2em 5.3vw;
+  }
+
+  .miniNav{
+    margin: -1.5em 0em;
+  }
+
+  .searchBar{
+    margin: 1em 0 0 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.5vw;
+  }
+
+  .hover h1 {
+    font-size: 4.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1.5vw;
+  }
+
+
+}
+
+
+
+
+
+
+
+/* Landscape Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+
+
+
+
+@media only screen 
+  and (min-width: 960px) 
+  and (max-width: 1023px) 
+  and (orientation : landscape){
+
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .secondaryNav{
+    margin: -1.5em 3.3vw;
+  }
+
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 2em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+
+  .searchInput:hover, .searchInput:focus{
+    width: 30vw;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+} 
+
+@media only screen 
+  and (min-width: 1023px) 
+  and (max-width: 1179px) 
+  and (orientation : landscape)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+  .secondaryNav{
+    margin: -1.5em 3.3vw;
+  }
+  
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+}
+
+
+@media only screen
+  and (min-width: 1180px)
+  and (max-width: 1194px)
+  and (orientation: landscape){
+
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 21px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+}
+
+@media only screen 
+  and (min-width : 1280px) 
+  and (min-height : 740px) 
+  and (max-height : 750px) {
+
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+  
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .secondaryNav{
+    margin: -1.5em 3.3vw;
+  }
+
+    
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+}
+
+/*Ipad Landscape*/
+@media only screen 
+and (min-height : 768px)
+and (max-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .secondaryNav{
+    margin: -1.5em 3.3vw 0 3.3vw;
+  }
+
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+
+  .searchInput:hover , .searchInput:focus{
+    width: 30vw;
+  }
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+
+}
+
+/* IPad Pro 10.5 Landscape */
+@media only screen 
+  and (min-height: 834px)
+  and (max-width: 1112px) 
+  and (orientation: landscape){
+
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 20vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 29.8vw;
+    height: 20vw;
+    margin-bottom: 0;
+  }
+
+  .secondaryNav{
+    margin: -1.5em 3.3vw;
+  }
+
+  .searchInput{
+    width: 20px;
+    height: 2.4vw;
+  }
+
+  .searchInput:hover , .searchInput:focus{
+    width: 30vw;
+  }
+
+  .searchBar{
+    margin: 1em 0 0 0;
+  }
+
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  } 
+
+}
+
+/* IPad Pro 12.5 Landscape */
+@media only screen
+  and (min-height: 1024px)
+  and (max-height: 1024px)
+  and (orientation: landscape){
+  .gridContainer{
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto-fill , 23vw);
+    margin: 1em 3.3vw;
+    row-gap: 20px;
+    column-gap: 19px;
+  }
+
+  .gridItem, .gridItem embed, .imageCover , .hover{
+    width: 30.2vw;
+    height: 23vw;
+    margin-bottom: 0;
+  }
+  
+  .secondaryNav{
+    margin: -1.5em 3.3vw;
+  }
+
+
+  .searchInput{
+    width: 20px;
+    height: 2vw;
+  }
+
+  .searchInput:hover , .searchInput:focus{
+    width: 30vw;
+  }
+  
+  .miniNav , .searchBar{
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .hover h1 {
+    font-size: 2.5vw;
+  }
+  
+  .hover .caption {
+    font-size: 1vw;
+  }
+
+}
+
+
+

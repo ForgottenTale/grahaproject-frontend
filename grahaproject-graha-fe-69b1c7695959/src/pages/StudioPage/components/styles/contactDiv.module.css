@@ -1,0 +1,642 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.contactPage {
+  width: 100%;
+  padding: 0 4vw;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+.map {
+  margin: 4vh 0vh;
+  margin-left: -0.65rem;
+  float: left;
+  position: relative;
+  
+}
+
+.map img {
+  height: 46.5vh;
+  width: 53.5vw;
+  cursor: default;
+  margin-bottom: 10vh;
+}
+
+.mapMarker {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: 40%;
+  left: 54%;
+}
+
+.mapMarker:hover {
+  top: 40%;
+  color: darkred;
+}
+
+.mediaBox img {
+  width: 100% !important;
+  height: 100%;
+}
+
+.mediaBox {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 2vh 4vh 0;
+  height: 65vh;
+  width: 96vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: overlay;
+    /* overflow: hidden;
+    text-align: center;
+    margin: 0 auto; */
+}
+.mediaBox::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.25);
+
+}
+.mediaBox > h1{
+  position: relative;
+  color: #ffffff;
+  font-weight: bold;  
+  font-size: 8em;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.info {
+  float: right;
+  height: 45vh;
+  margin: 3vh 0 0;
+  display: flex;
+  margin-left: 20em !important  ;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  color: #a4a4a4;
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+.dGrey {
+  padding-bottom: 10%;
+  width: 100%;
+  margin-right: 30%;
+}
+.infoBox1 {
+  margin-left: 25%;
+}
+
+.info a {
+  color: #646464;
+}
+
+.info a:hover {
+  text-decoration: none;
+  color: #646464;
+}
+
+.info img {
+  height: 15px;
+  float: right;
+}
+
+.dGrey {
+  color: #646464;
+}
+
+.infoBox2 p {
+  margin: 10px 0;
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1280px) {
+
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 19.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 5em;
+  }
+
+}
+
+@media only screen 
+  and (min-width : 1280px) 
+  and (min-height : 740px) 
+  and (max-height : 800px) {
+
+
+    
+}
+
+/* Basic Laptop Screens */
+@media only screen and (min-width : 1440px) {
+
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 23.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 5em;
+  }
+
+}
+
+/* Larger laptop screens */
+@media only screen  and (min-width : 1500px) {
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+  .map > img{
+    height: 55vh;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 26.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 8em;
+  }
+}
+
+
+/*LCD Displays*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1080px)  
+  and (min-height : 800px) 
+  and (max-height : 900px) {
+
+    .contactPage{
+      margin: 2em 1.5em;
+      padding: 0 0 0 0;
+    }
+  
+    .contactPage > span{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .map{
+      margin: 0;
+    }
+  
+    .map > img {
+      height: 50vh;
+      width: 60vw;
+    }
+
+    .info{
+      margin: 0;
+      margin-left: 8.5em !important;
+    }
+  
+    .infoBox1 > img{
+      height: 40px;
+    }
+  
+    .infoBox2{
+      margin-top: 5em;
+    }
+
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 100em) {
+
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 36.5em !important;
+  }
+
+  .infoBox2 > img{
+    height: 40px;
+    margin-bottom: 3em;
+  }
+
+  .infoBox2{
+    margin-top: 13em;
+  }
+
+}
+
+/* Macbook Pro */
+@media only screen 
+  and (min-width: 1700px) 
+  and (max-width: 1800px)  
+  and (min-height : 1080px) 
+  and (max-height : 1100px) {
+
+    .contactPage{
+      margin: 2em 1.5em;
+      padding: 0 0 0 0;
+    }
+  
+    .contactPage > span{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .map{
+      margin: 0;
+    }
+
+    .map > img{
+      height: 45vh;
+    }
+  
+    .info{
+      margin: 0;
+      margin-left: 31.5em !important;
+    }
+  
+    .infoBox1 > img{
+      height: 25px;
+    }
+  
+    .infoBox2{
+      margin-top: 5em;
+    }
+
+}
+
+/* Landscape Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+
+
+@media only screen 
+  and (min-width: 960px) 
+  and (max-width: 1023px) 
+  and (orientation : landscape){
+
+    .contactPage{
+      margin: 2em 1.5em;
+      padding: 0 0 0 0;
+    }
+  
+    .contactPage > span{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .map{
+      margin: 0;
+    }
+    
+    .map > img{
+      height: 64.5vh;
+      width: 59.5vw;
+    }
+
+
+    .info{
+      margin: 0;
+      margin-left: 7.5em !important;
+    }
+  
+    .infoBox1 > img{
+      height: 25px;
+    }
+  
+    .infoBox2{
+      margin-top: 5em;
+    }  
+}
+
+@media only screen 
+  and (min-width: 1179px) 
+  and (max-width: 1023px) 
+  and (orientation : landscape){
+
+    .contactPage{
+      margin: 2em 1.5em;
+      padding: 0 0 0 0;
+    }
+  
+    .contactPage > span{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .map{
+      margin: 0;
+    }
+  
+    .info{
+      margin: 0;
+      margin-left: 19.5em !important;
+    }
+  
+    .infoBox1 > img{
+      height: 25px;
+    }
+  
+    .infoBox2{
+      margin-top: 5em;
+    }
+}
+
+/*Ipad Landscape*/
+@media only screen 
+  and (min-height : 1024px)
+  and (max-height : 1024px) 
+  and (orientation : landscape) {
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .map > img{
+    height: 50vh;
+    width: 55vw;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 11.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 5em;
+  }
+}
+
+/* IPad Pro 10.5 Landscape */
+@media only screen 
+  and (min-width: 834px)
+  and (max-width: 834px) 
+  and (orientation: landscape) {
+  
+    .contactPage{
+      margin: 2em 1.5em;
+      padding: 0 0 0 0;
+    }
+  
+    .contactPage > span{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .map{
+      margin: 0;
+    }
+  
+    .info{
+      margin: 0;
+      margin-left: 15em !important;
+    }
+  
+    .infoBox1 > img{
+      height: 25px;
+    }
+  
+    .infoBox2{
+      margin-top: 5em;
+    }
+}
+
+/* IPad Pro 12.5 Landscape */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (min-height : 1366px)
+and (orientation: landscape){
+  
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 20.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 6em;
+  }
+}
+
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (min-height : 1024px)
+  and (orientation: landscape){
+
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 20.5em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 5em;
+  }
+}
+
+@media only screen
+  and (min-width: 1112px)
+  and (max-width: 1112px)
+  and (orientation: landscape){
+    
+  .contactPage{
+    margin: 2em 1.5em;
+    padding: 0 0 0 0;
+  }
+
+  .contactPage > span{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .map{
+    margin: 0;
+  }
+
+  .info{
+    margin: 0;
+    margin-left: 15em !important;
+  }
+
+  .infoBox1 > img{
+    height: 25px;
+  }
+
+  .infoBox2{
+    margin-top: 5em;
+  }
+
+}
+
+
+
+
+
+/* Potrait Orientation for Tablets and Mobiles */
+
+
+/* Tablets and IPads */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 880px) 
+  and (orientation : portrait){
+
+}
+
+/*Ipad Potrait*/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px)
+and (max-height: 1024px) 
+and (orientation : portrait) {
+
+
+}
+
+/* IPad Pro 10.5 Portrait */
+@media only screen 
+  and (min-width: 834px)
+  and (max-width: 834px) 
+  and (orientation: portrait) {
+
+
+}
+
+/* IPad Pro 12.5 Portrait */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait){
+
+  
+
+}
+
+

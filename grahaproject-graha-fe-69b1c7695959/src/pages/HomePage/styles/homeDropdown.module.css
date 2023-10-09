@@ -1,0 +1,71 @@
+.overlayMenu {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  width: 100%;
+  height: 100%;   
+}
+
+.overlayMenu > nav {
+  font-size: 1.5rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: relative;
+  margin-right: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlayMenu > nav > a {
+  display: block;
+  padding-top: 1.3em;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.overlayMenu > nav > a:hover {
+  text-decoration: none;
+  color: #9e9e9e;
+}
+
+@media only screen 
+  and (max-width:900px){
+  .overlayMenu > nav {
+    text-align: center;
+    position: fixed;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen 
+  and (max-width:1080px)
+  and (orientation : portrait){
+  .overlayMenu > nav {
+    text-align: center;
+    position: fixed;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@media only screen and
+  (min-width: 400px){
+  .overlayMenu > nav {
+      font-size: 1.5rem;
+      
+  }
+}

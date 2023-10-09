@@ -1,0 +1,68 @@
+.button {
+  cursor: pointer;
+  position: fixed;
+  right: 4em;
+  top: 60%;
+  padding-top: 15%;
+  right: 2em;
+}
+
+.chev_icon, .thumbnail{
+  width: 2.5em;
+  height: 2.5em;
+  opacity: 0.5;
+}
+
+@media only screen 
+  and (max-width:900px){
+  .scroll_icon{
+    
+  }
+}
+
+
+@media screen and (orientation: portrait) {
+  .button{
+    top: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    top: 70%;
+    margin-bottom: 9em;
+    /* right: 1em !important; */
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .button {
+    top: 80% !important;
+    /* right: 2em !important; */
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .button {
+    top: 80% !important;
+    /* right: 2em !important; */
+  }
+}
+
+@media only screen and (width: 768px) {
+  .button {
+    top: 80% !important;
+    /* right: 5em !important; */
+  }
+}
+
+@media only screen 
+  and (max-height: 575.98px) 
+  and (orientation: landscape) {
+  
+  .button {
+    top: 50% !important;
+    /* right: 4em !important; */
+  }
+
+}
