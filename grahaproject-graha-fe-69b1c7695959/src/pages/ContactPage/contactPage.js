@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import logo from "../../assets/images/logos/graha-black.png";
 // import Loader from "../../components/Loader/loader";
 import { BannerContext } from "../../contexts/contexts";
-import { BASE_URL } from "../../constants";
+import { BASE_URL,BASE_IMG_URL  } from "../../constants";
 import axios from 'axios';
 
 const ContactPage = () => {
@@ -39,7 +39,7 @@ const ContactPage = () => {
           className={styles.contactPage}
           >
           
-          <div className={styles.mediaBox} id="contact" style={{backgroundImage: `url(${banner && banner?.contactBanner?.data?.attributes?.url})`}}><h1></h1></div>
+          <div className={styles.mediaBox} id="contact" style={{backgroundImage: `url(${BASE_IMG_URL +(banner && banner?.contactBanner?.data?.attributes?.url)})`}}><h1></h1></div>
   
           <span>
               <div className={styles.map}>

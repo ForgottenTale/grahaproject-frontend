@@ -4,7 +4,7 @@ import styles from "../styles/homePage.module.css";
 import "../styles/carouselStyle.css";
 // import Loader from "../../../components/Loader/loader";
 import HomeLoader from "./homeLoader/homeLoader";
-import { BASE_URL } from "../../../constants";
+import { BASE_URL,BASE_IMG_URL } from "../../../constants";
 
 const ImgBackground = () => {
   const [bg, setBg] = useState([]);
@@ -75,7 +75,7 @@ const ImgBackground = () => {
               <div 
                 className={styles.backgroundImage}
                 style={{
-                  backgroundImage: `url(${img?.attributes.url})`
+                  backgroundImage: `url(${(BASE_IMG_URL +(img?.attributes.url))})`
                 }}  
                 >
               </div>

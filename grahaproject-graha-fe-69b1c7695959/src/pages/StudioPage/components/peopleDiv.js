@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { AboutContext, PeopleProvider } from "../../../contexts/contexts";
 import TeamList from "../TeamList";
 import styles from "./styles/peopleDiv.module.css"
+import {BASE_IMG_URL} from "../../../constants"
+
 
 const PeopleDiv = (props) => {
 
@@ -12,7 +14,7 @@ const PeopleDiv = (props) => {
             <div
                 className={styles.peopleContainer}
             >
-                <div className={styles.mediaBox} id="people" style={{backgroundImage: `url(${props?.imagePath?.data.attributes.url})`}}><h1>People</h1></div>
+                <div className={styles.mediaBox} id="people" style={{backgroundImage: `url(${BASE_IMG_URL + props?.imagePath?.data.attributes.url})`}}><h1>People</h1></div>
                 <TeamList />
 
                 <div className={styles.miniContent}>

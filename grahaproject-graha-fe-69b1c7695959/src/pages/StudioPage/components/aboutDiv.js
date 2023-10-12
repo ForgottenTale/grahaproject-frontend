@@ -1,14 +1,15 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import styles from "./styles/aboutDiv.module.css"
 import { AboutContext } from "../../../contexts/contexts";
+import { BASE_IMG_URL } from "../../../constants"
 
 const AboutDiv = (props) => {
-    
+
     const about = useContext(AboutContext);
-    
-    return(
+
+    return (
         <div className={styles.about_container}>
-            <div className={styles.mediaBox} id="about" style={{backgroundImage: `url(${props?.imagePath?.data.attributes.url})`}}></div>
+            <div className={styles.mediaBox} id="about" style={{ backgroundImage: `url(${BASE_IMG_URL + props?.imagePath?.data.attributes.url})` }}></div>
 
             <div className={styles.left}>
                 {about && about.aboutPara1}

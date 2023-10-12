@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "./components/styles/peopleDiv.module.css";
 import { Link } from "react-router-dom";
 import { PeopleContext } from "../../contexts/contexts";
+import {BASE_IMG_URL} from "../../constants"
 
 function TeamList() {
 
@@ -30,7 +31,7 @@ function TeamList() {
               <div key={idx} className={styles.peopleCard}>
                 <img
                   className={styles.imageContainer}
-                  src={`${person?.attributes?.userImage?.data.attributes.formats.medium.url}`}
+                  src={`${BASE_IMG_URL+person?.attributes?.userImage?.data.attributes.formats.medium.url}`}
                   alt="1"
                 />
               </div>

@@ -13,6 +13,7 @@ import Slider from "react-slick";
 import imageNotFound from "../../assets/images/image-not-found.png"
 import { ProjectContext } from "../../contexts/projectContext";
 import { Remarkable } from "remarkable";
+import { BASE_IMG_URL } from "../../constants";
 
 // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 //   console.log("Mobile");
@@ -27,16 +28,16 @@ function renderMarkdownToHTML(markdown) {
   // is shown to the same user, and because you
   // trust this Markdown parser to not have bugs.
   const renderedHTML = md.render(markdown);
-  return {__html: renderedHTML};
+  return { __html: renderedHTML };
 }
 
 
 export default function ProjectPage() {
   const { slug } = useParams();
-  
+
   const handle = useFullScreenHandle();
-  const [showOverlay , setShowOverlay] = useState(false)
-  const [_ , setIndex] = useState(0)
+  const [showOverlay, setShowOverlay] = useState(false)
+  const [_, setIndex] = useState(0)
   const mouseClickEvents = ['mousedown', 'click', 'mouseup'];
 
   const blog = useContext(ProjectContext);
@@ -45,14 +46,14 @@ export default function ProjectPage() {
 
   const markup = renderMarkdownToHTML(blog?.BlogContent);
 
-  function simulateMouseClick(element){
+  function simulateMouseClick(element) {
     mouseClickEvents.forEach(mouseEventType =>
       element.dispatchEvent(
         new MouseEvent(mouseEventType, {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            buttons: 1
+          view: window,
+          bubbles: true,
+          cancelable: true,
+          buttons: 1
         })
       )
     );
@@ -60,31 +61,31 @@ export default function ProjectPage() {
 
   const changeSlide = useCallback((event) => {
     // console.log(event.key);
-    if(event.key === "ArrowLeft"){
+    if (event.key === "ArrowLeft") {
       let element = document.querySelector('button[class="slick-arrow slick-prev"]');
       simulateMouseClick(element);
     }
-    if(event.key === "ArrowRight"){
+    if (event.key === "ArrowRight") {
       let element = document.querySelector('button[class="slick-arrow slick-next"]');
       simulateMouseClick(element);
     }
   })
 
   useEffect(() => {
-    document.addEventListener("keydown" , changeSlide , false)
-  } )
+    document.addEventListener("keydown", changeSlide, false)
+  })
 
   const sliderRef = useRef();
 
   useEffect(() => {
-    window.addEventListener('orientationchange' , () => {
-      if (window.screen.orientation.angle === 0 && handle.active){
+    window.addEventListener('orientationchange', () => {
+      if (window.screen.orientation.angle === 0 && handle.active) {
         handle.exit()
       }
     })
   })
 
-  const handleIndex = (i) =>{
+  const handleIndex = (i) => {
     console.log("Thumb index from prop: ", i)
     setIndex(i)
     sliderRef.current.slickGoTo(i);
@@ -92,98 +93,106 @@ export default function ProjectPage() {
 
   const settings = {
 
-    beforeChange: function(index){
-      
+    beforeChange: function (index) {
+
     },
 
-    afterChange: function(index) {
+    afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
       );
     }
   }
 
+  const handleImageURL = (img) => {
+    if (img?.attributes?.url !== undefined) {
+      return (BASE_IMG_URL + img?.attributes?.url)
+    } else {
+      return imageNotFound;
+    }
+  }
+
   return (
     <>
       <Header />
-      
+
       <Helmet>
         <title>Graha | {blog?.BlogTitle || slug || "No Title Provided"}</title>
       </Helmet>
 
       <div className="project_container">
         <div className="top_section">
-        <FullScreen 
-          handle={handle}
-        >
-          <div
-            className={handle.active ? "fullscreen_view" : "selected"}
+          <FullScreen
+            handle={handle}
           >
-            <Slider
-              {...settings}
-              ref={sliderRef}
-              dots={false}
-              infinite={true}
-              slidesToScroll={1}
-              slidesToShow={1}
-              fade={true}
+            <div
               className={handle.active ? "fullscreen_view" : "selected"}
-              slide="img"
-              
             >
-              {blog?.otherImages?.data?.map((img , idx) => (
-                <img
-                  src={img?.attributes?.url || imageNotFound}
-                  onClick={() => setSelectedImg(img?.attributes?.url || "")}
-                  style={{verticalAlign:"baseline"}}
-                  alt="img"
-                />
-              ))}
-            </Slider>
-          </div>
-        </FullScreen>
+              <Slider
+                {...settings}
+                ref={sliderRef}
+                dots={false}
+                infinite={true}
+                slidesToScroll={1}
+                slidesToShow={1}
+                fade={true}
+                className={handle.active ? "fullscreen_view" : "selected"}
+                slide="img"
+
+              >
+                {blog?.otherImages?.data?.map((img, idx) => (
+                  <img
+                    src={handleImageURL(img)}
+                    onClick={() => setSelectedImg(img?.attributes?.url || "")}
+                    style={{ verticalAlign: "baseline" }}
+                    alt="img"
+                  />
+                ))}
+              </Slider>
+            </div>
+          </FullScreen>
 
 
-        <div className="toolbar">
-          <div>
-            <FontAwesomeIcon 
-              onClick={handle.enter}
-              className="fullscreen_button"
-              icon={faExpand} 
-            />
+          <div className="toolbar">
+            <div>
+              <FontAwesomeIcon
+                onClick={handle.enter}
+                className="fullscreen_button"
+                icon={faExpand}
+              />
+            </div>
+
+            <div>
+              <img
+                src={thumb}
+                className="thumbnail"
+                onClick={() => setShowOverlay(true)}
+                alt="img"
+              />
+            </div>
           </div>
 
-          <div>
-            <img 
-              src={thumb}
-              className="thumbnail"
-              onClick={() => setShowOverlay(true)}
-              alt="img"
-            />            
+          <div className="blogMain">
+            <div className="blog_heading">
+              <h1>{blog?.BlogTitle}</h1>
+              <h5>Client : {blog?.Client}</h5>
+              <h5>Location : {blog?.Location}</h5>
+            </div>
+            <div className="blog_content">
+              <p dangerouslySetInnerHTML={markup}></p>
+              {/* <p>{blog?.BlogContent || ""}</p> */}
+            </div>
           </div>
-        </div>
 
-        <div className="blogMain">
-          <div className="blog_heading">
-            <h1>{blog?.BlogTitle}</h1>
-            <h5>Client : {blog?.Client}</h5>
-            <h5>Location : {blog?.Location}</h5>
-          </div>
-          <div className="blog_content">
-            <p dangerouslySetInnerHTML={markup}></p>
-            {/* <p>{blog?.BlogContent || ""}</p> */}
-          </div>
-        </div>
-        
         </div>
 
       </div>
 
-      <ThumbGallery 
-        images={blog?.otherImages?.data} 
-        showOver={showOverlay} 
+      <ThumbGallery
+        images={blog?.otherImages?.data}
+        showOver={showOverlay}
         setOverlay={setShowOverlay}
-        setImg={setSelectedImg} 
+        setImg={setSelectedImg}
         selectImg={selectedImg}
         idxChange={handleIndex}
       />

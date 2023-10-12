@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import Helmet from "react-helmet";
 import knowMore from "../../assets/images/know_more.png"
 import axios from "axios";
-import { BASE_URL } from "../../constants";
+import { BASE_URL, BASE_IMG_URL } from "../../constants";
 
 export default function PeoplePage() {
 
@@ -54,7 +54,7 @@ export default function PeoplePage() {
 
                         <div className="imageBox"
                             style={{
-                                backgroundImage: `url(${person?.attributes.userImage?.data.attributes.url})`
+                                backgroundImage: `url(${BASE_IMG_URL + person?.attributes.userImage?.data.attributes.url})`
                             }}
                         >
                         </div>

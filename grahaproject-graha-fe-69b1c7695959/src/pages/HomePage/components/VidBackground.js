@@ -3,41 +3,41 @@ import Carousel from "react-bootstrap/Carousel";
 import styles from "../styles/homePage.module.css";
 import "../styles/carouselStyle.css";
 import HomeLoader from "./homeLoader/homeLoader";
-import { BASE_URL } from "../../../constants";
+import { BASE_URL, BASE_IMG_URL } from "../../../constants";
 
 export default function VidBackground() {
   const [bg, setBg] = useState([]);
   const [loading, setLoading] = useState(true);
   const mouseClickEvents = ['mousedown', 'click', 'mouseup'];
 
-  function simulateMouseClick(element){
+  function simulateMouseClick(element) {
     mouseClickEvents.forEach(mouseEventType =>
       element.dispatchEvent(
         new MouseEvent(mouseEventType, {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            buttons: 1
+          view: window,
+          bubbles: true,
+          cancelable: true,
+          buttons: 1
         })
       )
     );
-}
+  }
 
   const changeSlide = useCallback((event) => {
     // console.log(event.key);
-    if(event.key === "ArrowLeft"){
+    if (event.key === "ArrowLeft") {
       let element = document.querySelector('a[class="carousel-control-prev"]');
       simulateMouseClick(element);
     }
-    if(event.key === "ArrowRight"){
+    if (event.key === "ArrowRight") {
       let element = document.querySelector('a[class="carousel-control-next"]');
       simulateMouseClick(element);
     }
   })
 
   useEffect(() => {
-    document.addEventListener("keydown" , changeSlide , false)
-  } )
+    document.addEventListener("keydown", changeSlide, false)
+  })
 
   useEffect(() => {
     setLoading(true);
@@ -60,9 +60,9 @@ export default function VidBackground() {
   }, []);
 
   if (loading) return (
-      
-    <HomeLoader /> 
-      
+
+    <HomeLoader />
+
   );
 
   return (
@@ -75,14 +75,14 @@ export default function VidBackground() {
         {bg &&
           bg.map((video, idx) => (
             <Carousel.Item key={idx}>
-              <div 
+              <div
                 className={styles.mediaBox}
                 style={{
-                  backgroundImage: `url(${video?.attributes.url})`
+                  backgroundImage: `url(${BASE_IMG_URL + video?.attributes.url})`
                 }}
                 aria-label="home"
                 title=""
-                >
+              >
               </div>
             </Carousel.Item>
           ))}
